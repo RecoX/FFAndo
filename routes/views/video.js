@@ -117,6 +117,7 @@ exports = module.exports = function(req, res) {
         var $ = cheerio.load(body);
         var video_url = $(".button_upload a").attr("href");
         locals.data.urlVideo = video_url;
+        console.log(video_url);
         next()
       });
     });
